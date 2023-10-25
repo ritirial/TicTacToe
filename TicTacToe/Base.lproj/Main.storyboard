@@ -40,15 +40,18 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Ubj-2x-2Do">
-                                <rect key="frame" x="64" y="270" width="265" height="312"/>
+                                <rect key="frame" x="19.666666666666657" y="249" width="353.66666666666674" height="354"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="aCC-F5-zas">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="88.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353.66666666666669" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARW-AH-wep">
-                                                <rect key="frame" x="0.0" y="0.0" width="49" height="88.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="eJh-6y-ySK"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted">
+                                                <buttonConfiguration key="configuration" style="tinted" buttonSize="medium">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="-">
                                                             <attributes>
@@ -63,9 +66,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrP-jy-HFN">
-                                                <rect key="frame" x="108" y="0.0" width="49" height="88.666666666666671"/>
+                                                <rect key="frame" x="88.999999999999986" y="0.0" width="175.66666666666663" height="30"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted">
+                                                <buttonConfiguration key="configuration" style="tinted" buttonSize="medium">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="-">
                                                             <attributes>
@@ -80,9 +83,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpK-Zc-PLH">
-                                                <rect key="frame" x="216" y="0.0" width="49" height="88.666666666666671"/>
+                                                <rect key="frame" x="323.66666666666663" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted">
+                                                <buttonConfiguration key="configuration" style="tinted" buttonSize="medium">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="-">
                                                             <attributes>
@@ -97,14 +100,21 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ARW-AH-wep" firstAttribute="leading" secondItem="aCC-F5-zas" secondAttribute="leading" id="Cxp-I9-AW2"/>
+                                            <constraint firstItem="VrP-jy-HFN" firstAttribute="height" secondItem="ARW-AH-wep" secondAttribute="height" id="GH4-n4-Xuw"/>
+                                            <constraint firstAttribute="trailing" secondItem="lpK-Zc-PLH" secondAttribute="trailing" id="GXZ-CN-k7A"/>
+                                            <constraint firstItem="VrP-jy-HFN" firstAttribute="width" secondItem="ARW-AH-wep" secondAttribute="width" multiplier="5.85556" id="HbF-vx-uD5"/>
+                                            <constraint firstItem="VrP-jy-HFN" firstAttribute="centerX" secondItem="aCC-F5-zas" secondAttribute="centerX" id="Zl2-Fl-qpB"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="pmK-U9-vFh">
-                                        <rect key="frame" x="0.0" y="111.66666666666669" width="265" height="88.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="53" width="353.66666666666669" height="248"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frX-tn-R8i">
-                                                <rect key="frame" x="0.0" y="0.0" width="49" height="88.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="248"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted">
+                                                <buttonConfiguration key="configuration" style="tinted" buttonSize="medium">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="-">
                                                             <attributes>
@@ -119,9 +129,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJq-a8-kvo">
-                                                <rect key="frame" x="108" y="0.0" width="49" height="88.666666666666671"/>
+                                                <rect key="frame" x="137.66666666666669" y="0.0" width="78.333333333333314" height="248"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted">
+                                                <buttonConfiguration key="configuration" style="tinted" buttonSize="medium">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="-">
                                                             <attributes>
@@ -136,9 +146,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqD-IN-hIH">
-                                                <rect key="frame" x="216" y="0.0" width="49" height="88.666666666666671"/>
+                                                <rect key="frame" x="275" y="0.0" width="78.666666666666686" height="248"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted">
+                                                <buttonConfiguration key="configuration" style="tinted" buttonSize="medium">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="-">
                                                             <attributes>
@@ -153,14 +163,19 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wJq-a8-kvo" firstAttribute="centerX" secondItem="pmK-U9-vFh" secondAttribute="centerX" id="7Fo-hy-7E7"/>
+                                            <constraint firstAttribute="trailing" secondItem="tqD-IN-hIH" secondAttribute="trailing" id="AJR-9B-FsK"/>
+                                            <constraint firstItem="frX-tn-R8i" firstAttribute="leading" secondItem="pmK-U9-vFh" secondAttribute="leading" id="d50-O8-lgt"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="jWV-gm-ign">
-                                        <rect key="frame" x="0.0" y="223.33333333333329" width="265" height="88.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="324" width="353.66666666666669" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wx7-M1-ak2">
-                                                <rect key="frame" x="0.0" y="0.0" width="49" height="88.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="30"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted">
+                                                <buttonConfiguration key="configuration" style="tinted" buttonSize="large">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="-">
                                                             <attributes>
@@ -175,9 +190,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NV2-qK-3nW">
-                                                <rect key="frame" x="108" y="0.0" width="49" height="88.666666666666671"/>
+                                                <rect key="frame" x="137.66666666666669" y="0.0" width="78.333333333333314" height="30"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted">
+                                                <buttonConfiguration key="configuration" style="tinted" buttonSize="large">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="-">
                                                             <attributes>
@@ -192,9 +207,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yB8-Yx-O2E">
-                                                <rect key="frame" x="216" y="0.0" width="49" height="88.666666666666671"/>
+                                                <rect key="frame" x="275" y="0.0" width="78.666666666666686" height="30"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted">
+                                                <buttonConfiguration key="configuration" style="tinted" buttonSize="large">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="-">
                                                             <attributes>
@@ -209,8 +224,30 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NV2-qK-3nW" firstAttribute="centerX" secondItem="jWV-gm-ign" secondAttribute="centerX" id="blo-CM-Bfb"/>
+                                            <constraint firstAttribute="trailing" secondItem="yB8-Yx-O2E" secondAttribute="trailing" id="nCh-HN-qgQ"/>
+                                            <constraint firstItem="Wx7-M1-ak2" firstAttribute="leading" secondItem="jWV-gm-ign" secondAttribute="leading" id="w6r-QB-WPc"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aCC-F5-zas" secondAttribute="trailing" id="4PQ-qe-y3n"/>
+                                    <constraint firstAttribute="trailing" secondItem="pmK-U9-vFh" secondAttribute="trailing" id="CHD-Bt-3T9"/>
+                                    <constraint firstAttribute="trailing" secondItem="jWV-gm-ign" secondAttribute="trailing" id="GLe-8n-FLF"/>
+                                    <constraint firstItem="jWV-gm-ign" firstAttribute="width" secondItem="Ubj-2x-2Do" secondAttribute="width" id="HjF-V8-IZ3"/>
+                                    <constraint firstItem="pmK-U9-vFh" firstAttribute="width" secondItem="Ubj-2x-2Do" secondAttribute="width" id="IQF-Pw-nce"/>
+                                    <constraint firstItem="aCC-F5-zas" firstAttribute="centerX" secondItem="Ubj-2x-2Do" secondAttribute="centerX" id="KIu-JA-Swp"/>
+                                    <constraint firstItem="pmK-U9-vFh" firstAttribute="centerX" secondItem="Ubj-2x-2Do" secondAttribute="centerX" id="Qp4-sq-9HH"/>
+                                    <constraint firstItem="aCC-F5-zas" firstAttribute="width" secondItem="Ubj-2x-2Do" secondAttribute="width" id="R68-hL-buO"/>
+                                    <constraint firstItem="jWV-gm-ign" firstAttribute="centerX" secondItem="Ubj-2x-2Do" secondAttribute="centerX" id="Rdw-87-uPE"/>
+                                    <constraint firstItem="pmK-U9-vFh" firstAttribute="leading" secondItem="Ubj-2x-2Do" secondAttribute="leading" id="UKi-Na-hgj"/>
+                                    <constraint firstItem="aCC-F5-zas" firstAttribute="top" secondItem="Ubj-2x-2Do" secondAttribute="top" id="dS5-HX-I34"/>
+                                    <constraint firstAttribute="bottom" secondItem="jWV-gm-ign" secondAttribute="bottom" id="eIZ-1r-qrw"/>
+                                    <constraint firstItem="aCC-F5-zas" firstAttribute="leading" secondItem="Ubj-2x-2Do" secondAttribute="leading" id="mCE-iL-e45"/>
+                                    <constraint firstItem="pmK-U9-vFh" firstAttribute="centerY" secondItem="Ubj-2x-2Do" secondAttribute="centerY" id="vzR-6s-mbl"/>
+                                    <constraint firstItem="jWV-gm-ign" firstAttribute="leading" secondItem="Ubj-2x-2Do" secondAttribute="leading" id="xMZ-aP-Ig1"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -219,6 +256,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D1Q-g0-KUA" secondAttribute="bottom" constant="79" id="1we-PV-8Fq"/>
                             <constraint firstItem="a7R-cr-7PA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5CH-k4-uwf"/>
                             <constraint firstItem="D1Q-g0-KUA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jtg-KC-Vcw"/>
+                            <constraint firstItem="Ubj-2x-2Do" firstAttribute="width" secondItem="a7R-cr-7PA" secondAttribute="width" id="PD5-kK-0db"/>
+                            <constraint firstItem="Ubj-2x-2Do" firstAttribute="height" secondItem="a7R-cr-7PA" secondAttribute="height" id="dtD-73-hmw"/>
                             <constraint firstItem="Ubj-2x-2Do" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pHj-G9-W2D"/>
                             <constraint firstItem="a7R-cr-7PA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qcM-kC-r5A"/>
                             <constraint firstItem="Ubj-2x-2Do" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sM6-Bj-ceR"/>

@@ -36,7 +36,45 @@ class ViewController: UIViewController {
 
 
     @IBAction func handleTap(_ sender: UIButton) {
-        
+        if userTurn {
+            if sender == label1 && board[0] == "-" {
+                setMove(number: 0, mark: "X")
+                userTurn = false
+                makeMove()
+            } else if sender == label2 && board[1] == "-" {
+                setMove(number: 1, mark: "X")
+                userTurn = false
+                makeMove()
+            } else if sender == label3 && board[2] == "-" {
+                setMove(number: 2, mark: "X")
+                userTurn = false
+                makeMove()
+            } else if sender == label4 && board[3] == "-" {
+                setMove(number: 3, mark: "X")
+                userTurn = false
+                makeMove()
+            } else if sender == label5 && board[4] == "-" {
+                setMove(number: 4, mark: "X")
+                userTurn = false
+                makeMove()
+            } else if sender == label6 && board[5] == "-" {
+                setMove(number: 5, mark: "X")
+                userTurn = false
+                makeMove()
+            } else if sender == label7 && board[6] == "-" {
+                setMove(number: 6, mark: "X")
+                userTurn = false
+                makeMove()
+            } else if sender == label8 && board[7] == "-" {
+                setMove(number: 7, mark: "X")
+                userTurn = false
+                makeMove()
+            } else if sender == label9 && board[8] == "-" {
+                setMove(number: 8, mark: "X")
+                userTurn = false
+                makeMove()
+            }
+        }
     }
     
     @IBAction func startGame(_ sender: UIButton) {
@@ -148,6 +186,149 @@ class ViewController: UIViewController {
         }
     }
     
+    func checkTwoInARow(check1: Int, check2: Int, check3: Int, checkMark: String, setMark: String) -> Bool {
+        var moved = false
+        if board[check1] == checkMark && board[check2] == checkMark && board[check3] == "-" {
+            setMove(number: check3, mark: setMark)
+            moved = true
+        } else if board[check1] == checkMark && board[check3] == checkMark && board[check2] == "-" {
+            setMove(number: check2, mark: setMark)
+            moved = true
+        } else if board[check2] == checkMark && board[check3] == checkMark && board[check1] == "-" {
+            setMove(number: check1, mark: setMark)
+            moved = true
+        }
+        return moved
+    }
+    
+    func checkWin() -> Bool {
+        var moved = checkTwoInARow(check1: 0, check2: 1, check3: 2, checkMark: "O", setMark: "O")
+        if !moved {
+            moved = checkTwoInARow(check1: 3, check2: 4, check3: 5, checkMark: "O", setMark: "O")
+        }
+        if !moved {
+            moved = checkTwoInARow(check1: 6, check2: 7, check3: 8, checkMark: "O", setMark: "O")
+        }
+        //column
+        if !moved {
+            moved = checkTwoInARow(check1: 0, check2: 3, check3: 6, checkMark: "O", setMark: "O")
+        }
+        if !moved {
+            moved = checkTwoInARow(check1: 1, check2: 4, check3: 7, checkMark: "O", setMark: "O")
+        }
+        if !moved {
+            moved = checkTwoInARow(check1: 2, check2: 5, check3: 8, checkMark: "O", setMark: "O")
+        }
+        //diagonal
+        if !moved {
+            moved = checkTwoInARow(check1: 0, check2: 4, check3: 8, checkMark: "O", setMark: "O")
+        }
+        if !moved {
+            moved = checkTwoInARow(check1: 2, check2: 4, check3: 6, checkMark: "O", setMark: "O")
+        }
+        return moved
+    }
+    
+    func checkBlock() -> Bool {
+        var moved = checkTwoInARow(check1: 0, check2: 1, check3: 2, checkMark: "X", setMark: "O")
+        if !moved {
+            moved = checkTwoInARow(check1: 3, check2: 4, check3: 5, checkMark: "X", setMark: "O")
+        }
+        if !moved {
+            moved = checkTwoInARow(check1: 6, check2: 7, check3: 8, checkMark: "X", setMark: "O")
+        }
+        //column
+        if !moved {
+            moved = checkTwoInARow(check1: 0, check2: 3, check3: 6, checkMark: "X", setMark: "O")
+        }
+        if !moved {
+            moved = checkTwoInARow(check1: 1, check2: 4, check3: 7, checkMark: "X", setMark: "O")
+        }
+        if !moved {
+            moved = checkTwoInARow(check1: 2, check2: 5, check3: 8, checkMark: "X", setMark: "O")
+        }
+        //diagonal
+        if !moved {
+            moved = checkTwoInARow(check1: 0, check2: 4, check3: 8, checkMark: "X", setMark: "O")
+        }
+        if !moved {
+            moved = checkTwoInARow(check1: 2, check2: 4, check3: 6, checkMark: "X", setMark: "O")
+        }
+        return moved
+    }
+    
+    func checkCenter() -> Bool {
+        var moved = false
+        if board[4] == "-" {
+            setMove(number: 4, mark: "O")
+            moved = true
+        }
+        return moved
+    }
+    
+    func checkOppositeCorner() -> Bool {
+        var moved = false
+        if board[0] == "X" && board[8] == "-" {
+            setMove(number: 8, mark: "O")
+            moved = true
+        } else if board[8] == "X" && board[0] == "-" {
+            setMove(number: 0, mark: "O")
+            moved = true
+        } else if board[2] == "X" && board[6] == "-" {
+            setMove(number: 6, mark: "O")
+            moved = true
+        } else if board[6] == "X" && board[2] == "-" {
+            setMove(number: 2, mark: "O")
+            moved = true
+        }
+        return moved
+    }
+    
+    func checkEmptyCorner() -> Bool {
+        var moved = false
+        if board[0] == "-" {
+            setMove(number: 0, mark: "O")
+            moved = true
+        } else if board[2] == "-" {
+            setMove(number: 2, mark: "O")
+            moved = true
+        } else if board[6] == "-" {
+            setMove(number: 6, mark: "O")
+            moved = true
+        } else if board[8] == "-" {
+            setMove(number: 8, mark: "O")
+            moved = true
+        }
+        return moved
+    }
+    
+    func setFirstEmptyPosition() {
+        var moved = false
+        for index in 0...8 {
+            if !moved && board[index] == "-" {
+                setMove(number: index, mark: "O")
+                moved = true
+            }
+        }
+    }
+    
+    func makeMove() {
+        if !checkGameOver() {
+            if !checkWin() {
+                if !checkBlock() {
+                    if !checkCenter() {
+                        if !checkOppositeCorner() {
+                            if !checkEmptyCorner() {
+                                setFirstEmptyPosition()
+                            }
+                        }
+                    }
+                }
+            }
+            if !checkGameOver() {
+                userTurn = true
+            }
+        }
+    }
     
 }
-
